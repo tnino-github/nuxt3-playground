@@ -1,3 +1,7 @@
+<script setup lang="ts">
+  const { data: title } = await useFetch("/api/hello");
+</script>
+
 <template>
   <Html lang="ja">
     <Head>
@@ -6,5 +10,5 @@
     </Head>
   </Html>
 
-  <h1>Hoge</h1>
+  <h1>{{ title }}</h1>
 </template>
